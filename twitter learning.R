@@ -15,27 +15,16 @@ install.packages('wordcloud')
 download.file(url="http://curl.haxx.se/ca/cacert.pem",destfile="cacert.pem")
 
 
-consumer_key <- "4kOf3sdPkAJmF9RRMwc9TnQ1T"
-consumer_secret <- "MlRfApd4YfN7zz6zlhw7BKlwKq92LTlHmAYBdI8CA2nCO4IUxr"
-access_token <- "3483753554-AhZIuNXZrKMP6pQuQsKIZyiG8w5LBqGqlLvCa9K"
-access_secret <- "MzNg8IbALXBa5yftDHpm4DWwF0bws96yEE9gkpMQpdUE8"
+consumer_key <- "XXXXX"
+consumer_secret <- "AAAAAAAAAAAAAAAA"
+access_token <- "CCCCCCCCCCCCC"
+access_secret <- "DDDDDDDD"
 
 install.packages("httpuv") httpuv
 
 setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
 
-twitteR:::setup_twitter_oauth(consumer_key,consumer_secret, access_token, access_secret)
-
-#create an object "cred" that will save the authenticated object that we can use for later sessions
-#cred <- OAuthFactory$new(consumerKey='DueD6NxUAPoWqTdqtkupD1HpR',
-#                         consumerSecret='QXNvB4MxQlCf8BdvfUBru9eKeSZNoS2BcOkVdXYIEwlP9J2Izm',
-#                         requestURL='https://api.twitter.com/oauth/request_token',
-#                         accessURL='https://api.twitter.com/oauth/access_token',
-#                         authURL='https://api.twitter.com/oauth/authorize')
-
-#cred$handshake(cainfo="cacert.pem")
-
-
+#twitteR:::setup_twitter_oauth(consumer_key,consumer_secret, access_token, access_secret)
 
 AlphaGo <- searchTwitteR("zuckerberg",n=100,lang = "en",geocode = '20.593684,78.96288,60mi')
 AlphaGo[1:3]
